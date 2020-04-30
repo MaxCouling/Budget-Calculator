@@ -17,19 +17,6 @@ def i_or_e():
     else:#if the user didnt input income or expense this code will run forcing the user to type in it again
       print("Please put in either income or expense\n")#if the user didnt type in either income or expense this error code will
 
-
-useritem = 0
-def imt():#imt, item money time does calulations converting the user inputs
-  print("epic")
-def banana(e):
-  global useritem
-  
-  if e.upper() == "CHANGE" and "C":
-    i_or_e()
-  elif e.upper() == "XXX":
-    imt()
-  else:
-    useritem = e
   
 #name of item
 #amount of money assoated
@@ -40,27 +27,36 @@ while running:#running program
   #STUCTURE OF PROGRAM
   #TELL USER HOW TO USE
   print("Hello, welcome to Max's Budget Calculator!\n")
-  input("type in 'Change' or 'c'to change your inputs from income to an expense and 'xxx' to exit\nPress enter to continue")
-  i_or_e()
-  userinput = 0
-
-  if userincome:#user lists incomes
+  input("'xxx' to exit\nPress enter to continue")
+  items = False
+  money = False
+  time = False
+  useritems = []
+  while not items:
+    os.system("clear")
     
-    banana(input("what is giving you money"))
-    usermoney = input("Amount of money that gets you")#needs to me numbers only
-    usertime = input("The time period you gain this money")#has to be weeks month quarter year fortnight
-    print(useritem)
-  else:#user lists expenses
+    for x in range(len(useritems)): 
+      print (x+1,useritems[x])#lists what user has allready put in
+    iteminput = input("What items cause income to your budget?\n")
     
-    useritem = input("Name of item")
-    usermoney = input("amount of money")
-    usertime = input("Timeperiod")
-
+    if iteminput.upper() == "XXX":
+      items = True
+      break
+      break
+      
+    useritems.append(iteminput)#adds user input to the useritems list
+    
+    
+    
+  break
+    
+  
+  
 
 
 
 
 
 print("Through Succefully")#printing so we know that it went through the code
-print(userincome)#debug
+
 
