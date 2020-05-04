@@ -8,10 +8,10 @@ def i_or_e():
   while userincome == 0:
     userinput = input("Is this income or an expense\n").upper()# .upper used to reduce error of captilisation 
 
-    if userinput == "E" and "EXPENSE":#if the user wants to input an expense this code will come up
+    if userinput == "E" or "EXPENSE":#if the user wants to input an expense this code will come up
       userincome = False#sets userincome as false, so its a expense
       break#breaks out of the while loop
-    elif userinput == "I" and "INCOME":
+    elif userinput == "I" or "INCOME":
       userincome = True#sets income as true
       break
     else:#if the user didnt input income or expense this code will run forcing the user to type in it again
@@ -45,7 +45,7 @@ while running:#running program
       break
       
     useritems.append(iteminput)#adds user input to the useritems list
-    
+
     
     
   break
@@ -57,6 +57,6 @@ while running:#running program
 
 
 
-print("Through Succefully")#printing so we know that it went through the code
+print("Through Successfully")#printing so we know that it went through the code
 
 
